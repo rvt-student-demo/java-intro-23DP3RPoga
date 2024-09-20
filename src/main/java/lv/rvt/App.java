@@ -7,6 +7,30 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         
+
+
+        // Speeding ticket
+        System.out.println("Give speed: ");
+        int intInput=Integer.valueOf(scanner.nextLine());
+         if (intInput>120) {
+                System.out.println("Speeding ticket!");
+            }   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // System.out.println("Ievadiet savu vardu");
         // String name = scanner.nextLine();
         // System.out.println("Ievadiet savu uzvardu");
@@ -71,20 +95,28 @@ public class App
 
         //Simple calculator
 
-        System.out.println("Give first number: ");
-        int first = Integer.valueOf(scanner.nextLine());
+        // System.out.println("Give first number: ");
+        // int first = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Give second number: ");
-        int second = Integer.valueOf(scanner.nextLine());
+        // System.out.println("Give second number: ");
+        // int second = Integer.valueOf(scanner.nextLine());
 
-        System.out.println(first+" + "+second+" = "+(first+second));
-        System.out.println(first+" - "+second+" = "+(first-second));
-        System.out.println(first+" * "+second+" = "+(first*second));
-        System.out.println(first+" / "+second+" = "+((first+(double)second)/2));
-
-
+        // System.out.println(first+" + "+second+" = "+(first+second));
+        // System.out.println(first+" - "+second+" = "+(first-second));
+        // System.out.println(first+" * "+second+" = "+(first*second));
+        // System.out.println(first+" / "+second+" = "+((first+(double)second)/2));
 
 
+
+            // int first = (1 + 1);//2
+            // int second = first + 3 * (2 + 5);//23
+        
+            // first = 5;
+        
+            // int third = first + second;//28
+            // System.out.println(first);//5
+            // System.out.println(second);//23
+            // System.out.println(third);//28
         
         
         
