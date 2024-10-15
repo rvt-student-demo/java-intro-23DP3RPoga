@@ -5,7 +5,7 @@ public class App
     public static void main( String[] args )
     {
 
-        Stars.printRighLeaningTriangle(5);
+        Stars.christmasTree(100);
         }       
 }
 

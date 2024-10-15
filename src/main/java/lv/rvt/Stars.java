@@ -68,26 +68,34 @@ public class Stars {
     }
     public static void christmasTree(int height){
 
-                                //height 4
+                                //height 4  
     //      *                   space 3 stars 1
     //     ***                  space 2 stars 3
     //    *****                 space 1 stars 5
-    //   *******                space 0 stars 7
+                                    //space 0 stars 7
 
 
     //     ***                  space  2 stars 3
     //     ***                  space  2 stars 3
 
-
-        while (condition) {
+        for (int i = 0; i < height; i++) { //0 1 2 3 
+            printSpaces(height-i);
+            printStars(i*2+1);//0*2+1=1
+            //3*2+1=7
+        
             
         }
-        printSpaces();
+        printSpaces(height-1);
         printStars(3);
-        printSpaces();
+        printSpaces(height-1);
         printStars(3);
-    }
-}   
+        
+        
+        
+       
+    }   
+}
+
 
     
 
