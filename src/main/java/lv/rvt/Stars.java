@@ -80,7 +80,7 @@ public class Stars {
 
         for (int i = 0; i < height; i++) { //0 1 2 3 
             printSpaces(height-i);
-            printStars(i*2+1);//0*2+1=1
+            printStars(i*2+1);//0*2+1=
             //3*2+1=7
         
             
