@@ -3,27 +3,21 @@ import java.util.Scanner;
 public class App { 
 
 public static void main(String[] args) {
-    PaymentCard paulsCard = new PaymentCard(20);
-    PaymentCard mattsCard = new PaymentCard(30);
-
-    paulsCard.eatHeartily();
-    mattsCard.eatAffordably();
-
-    System.out.println("Pauls balance: " + paulsCard.toString());
-    System.out.println("Matts balance: " + mattsCard.toString());
-
-    paulsCard.addMoney(20);
-    mattsCard.eatHeartily();
-
-    System.out.println("Pauls balance: " + paulsCard.toString());
-    System.out.println("Matts balance: " + mattsCard.toString());
-
-    paulsCard.eatAffordably();
-    paulsCard.eatAffordably();
-    mattsCard.addMoney(50);
+    Account artosAccount = new Account("Arto's account", 100.00);
+    Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
     
-    System.out.println("Pauls balance: " + paulsCard.toString());
-    System.out.println("Matts balance: " + mattsCard.toString());
+    System.out.println("Initial state");
+    System.out.println(artosAccount);
+    System.out.println(artosSwissAccount);
+    
+    artosAccount.withdraw(20);
+    System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+    artosSwissAccount.deposit(200);
+    System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+    
+    System.out.println("End state");
+    System.out.println(artosAccount);
+    System.out.println(artosSwissAccount);
     }
 }
   
