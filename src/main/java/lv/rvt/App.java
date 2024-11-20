@@ -1,23 +1,46 @@
 package lv.rvt;
+import java.util.ArrayList;
 import java.util.Scanner;
+
 public class App { 
 
-public static void main(String[] args) {
-    Account artosAccount = new Account("Arto's account", 100.00);
-    Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
-    
-    System.out.println("Initial state");
-    System.out.println(artosAccount);
-    System.out.println(artosSwissAccount);
-    
-    artosAccount.withdraw(20);
-    System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
-    artosSwissAccount.deposit(200);
-    System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
-    
-    System.out.println("End state");
-    System.out.println(artosAccount);
-    System.out.println(artosSwissAccount);
+    public static void main(String[] args) {
+        ArrayList<String> name = new ArrayList<String>();
+        ArrayList<String> pages  = new ArrayList<String>();
+        ArrayList<String> year = new ArrayList<String>();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Title: ");
+            String bookName = scanner.nextLine();
+            if (bookName.equals("")){
+                break;
+            }
+            name.add(bookName);
+            
+            System.out.println("Pages: ");
+            pages.add(scanner.nextLine());
+            
+            System.out.println("Publication year: ");
+            year.add(scanner.nextLine());
+        }
+
+        System.out.println("What information will be printed?");
+        String input= scanner.nextLine();
+        if (input.equals("everything"))
+        {
+            for (int i = 0; i < name.size(); i++) {
+                System.out.println(name.get(i)+","+pages.get(i)+","+year.get(i));
+
+            }
+        }
+        else if (input.equals("name")){
+            for (int i = 0; i < name.size(); i++) {
+                System.out.println(name.get(i));
+
+        }
     }
 }
-  
+}
+
+
