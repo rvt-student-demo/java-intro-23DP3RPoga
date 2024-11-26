@@ -1,36 +1,19 @@
 package lv.rvt;
 public class Product {
-String name;
-String location;
-int weight;
-        public String getName() {
-        return name;
+    String name;
+    double price;
+    int quantity;
+
+
+     public Product (String initialName, double initialPrice, int initialQuantity){
+        this.name =initialName;
+        this.price =initialPrice;
+        this.quantity = initialQuantity;
     }
 
-    public int getWeight() {
-        return weight;
+    public void printProduct(){
+        System.out.println(this.name + ", price " + this.price + ", " + this.quantity + " pcs");
     }
 
-    public String getLocation() {
-        return location;
-    }   
-    public Product(String name){
-        this.name = name; 
-        this.location="Shelf";
-        this.weight=1;
-    }
-    public Product(String name, String location){
-        this.name = name;
-        this.location = location;
-        this.weight= 1;
-    }
-    public Product(String name, int weight){
-        this.name = name;
-        this.weight = weight;
-        this.location= "Shelf";
-        
-    }
-    public String toString() {
-        return this.name + " (" + this.weight + " kg) can be found from the " + this.location;
-    }   
+ 
 }
