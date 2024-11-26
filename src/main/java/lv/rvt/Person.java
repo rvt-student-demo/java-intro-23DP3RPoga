@@ -1,33 +1,22 @@
 package lv.rvt;
 
-
+import java.util.ArrayList;
 
 public class Person {
     private String name;
-    private int age;
+    int age;
     private int weight;
     private int height;
     
-    public Person(String initialName) {
-        this.age = 0;
-        this.weight = 0;
-        this.height = 0;
+
+
+    public Person(String initialName,int initialAge,int initialWeight,int initialHeight){
+        this.age = initialAge;
+        this.weight = initialWeight;
+        this.height = initialHeight;
         this.name = initialName;
+        }
+    public String toString(){
+        return "Name: "+this.name+" Age: "+age+" Weight: "+weight+" Height: "+height;
+        }
     }
-
-    public void setHeight(int newHeight) {
-        this.height = newHeight;
-    }
-
-    public void setWeight(int newWeight) {
-        this.weight = newWeight;
-    }
-
-    public double bodyMassIndex() {
-        double heigthPerHundred = this.height / 100.0;
-        return this.weight / (heigthPerHundred * heigthPerHundred);
-    }
-    public String getName(){
-        return this.name;
-    }
-}
