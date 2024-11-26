@@ -2,7 +2,7 @@ package lv.rvt;
 
 public class DecreasingCounter
      {
-    public int value;   // a variable that remembers the value of the counter
+    private int value;   // a variable that remembers the value of the counter
 
     public DecreasingCounter(int initialValue) {
         this.value = initialValue;
@@ -19,9 +19,11 @@ public class DecreasingCounter
         else{
             return;
         }
-
-        
     }
+    public void reset() {
+        this.value=0;
+    }
+
 
     // and the other methods go here
 }
