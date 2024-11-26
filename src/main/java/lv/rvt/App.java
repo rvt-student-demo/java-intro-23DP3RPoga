@@ -5,8 +5,14 @@ import java.util.Scanner;
 public class App { 
 
     public static void main(String[] args) {
-        Product product = new Product("bannaa", 1.1, 13);
+        DecreasingCounter counter = new DecreasingCounter(10);
 
-        product.printProduct();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
     }
 }
