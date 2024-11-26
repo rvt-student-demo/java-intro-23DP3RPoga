@@ -1,38 +1,21 @@
 package lv.rvt;
 
-import java.io.*;
-import java.util.ArrayList;
+
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        ArrayList<Person> persons = new ArrayList<>();
-        BufferedReader br = new BufferedReader(new FileReader("src/main/resources/persons.csv"));
-        
-        br.readLine();
-        String line;
-        while ((line = br.readLine()) != null) {
-            String[] Dati = line.split(",");
-            String name = Dati[0];
-            Integer age = Integer.valueOf(Dati[1]);
-            Integer height = Integer.valueOf(Dati[2]);
-            Integer weight = Integer.valueOf(Dati[3]);
+    public static void main(String[] args) {
+        Timer timer = new Timer();
 
-            Person person = new Person(name, age, height, weight);
-            persons.add(person);
-        }
-        
-        br.close();
+        while (true) {
+            System.out.println(timer);
+            timer.advance();
 
-        if (!persons.isEmpty()) {
-            int totalAge = 0;
-            for (Person person : persons) {
-                totalAge += person.age;
-                System.out.println(person);
+            try {
+                Thread.sleep(10);
+            } catch (Exception e) {
+
             }
-            double averageAge = (double) totalAge / persons.size();
-            System.out.println("Average Age: " + averageAge);
-        } else {
-            System.out.println("No persons found.");
         }
+
     }
 }

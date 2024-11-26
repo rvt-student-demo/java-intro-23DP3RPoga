@@ -1,20 +1,25 @@
 package lv.rvt;
 
 public class Timer {
-    private ClockHand hours;
-    private ClockHand minutes;
-    private ClockHand seconds;
 
+    private final ClockHand seconds;
+    private final ClockHand milliseconds;
 
-    public Timer(){
-
-    }
-    public String toString(){
-        return hours.toString() + ":" + minutes.toString() + ":" + seconds.toString();
-    }
-    public void advance(){
-        this.seconds=seconds+0.01;
+    public Timer() {
+        this.seconds = new ClockHand(60);
+        this.milliseconds = new ClockHand(100);
     }
 
+    public void advance() {
+        this.milliseconds.advance();
+
+        if (this.milliseconds.value() == 0) {
+            this.seconds.advance();
+        }
+    }
+
+    public String toString() {
+        return seconds + ":" + milliseconds;
+    }
 
 }
