@@ -20,5 +20,7 @@ public class Account {
         return String.valueOf(balance);
         
     }
-
+    public String toString(){
+        return String.valueOf(balance);
+    }
 }

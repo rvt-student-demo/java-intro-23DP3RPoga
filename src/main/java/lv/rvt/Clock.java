@@ -1,6 +1,5 @@
 package lv.rvt;
 
-
 public class Clock {
     private ClockHand hours;
     private ClockHand minutes;

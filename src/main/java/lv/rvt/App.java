@@ -5,14 +5,12 @@ import java.util.Scanner;
 public class App { 
 
     public static void main(String[] args) {
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
+        Account matthewsAccount = new Account("Matthew's account", 1000);
+        Account myAccount = new Account("My account ", 0);
         
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        matthewsAccount.withdraw(100);
+        myAccount.deposit(100);
+        System.out.println(matthewsAccount);
+        System.out.println(myAccount);
     }
 }
-
-
