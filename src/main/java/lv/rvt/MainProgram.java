@@ -1,13 +1,18 @@
 package lv.rvt;
 
+import java.util.ArrayList;
+
 public class MainProgram {
-    public static void main ( String[] args )
-    {
-       Box box = new  Box( 2.5, 5.0, 6.0 ) ;
-  
-       System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
-  
-       System.out.println( "length: " + box.length + " height: " + box.height +"width:  " + box.width )  ;
-  
-    }
+    public static void main ( String[] args ){
+      ArrayList<Person> persons = new ArrayList<Person>();
+    persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+    persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+    printPersons(persons);
   }
+  public static void printPersons(ArrayList<Person> persons){
+   for(Person person: persons){
+         System.out.println(person);
+}
+
+}
+}

@@ -4,19 +4,15 @@ import java.util.ArrayList;
 
 public class Person {
     private String name;
-    int age;
-    private int weight;
-    private int height;
-    
+    private String adress;
 
 
-    public Person(String initialName,int initialAge,int initialWeight,int initialHeight){
-        this.age = initialAge;
-        this.weight = initialWeight;
-        this.height = initialHeight;
+    public Person(String initialName,String initialAdress){
         this.name = initialName;
+        this.adress = initialAdress;
+
         }
     public String toString(){
-        return "Name: "+this.name+" Age: "+age+" Weight: "+weight+" Height: "+height;
+        return this.name+"\n  "+this.adress;
         }
     }
