@@ -1,18 +1,32 @@
 package lv.rvt;
 
-import java.util.ArrayList;
+
 
 public class Person {
     private String name;
-    private String adress;
+
+    private int age;
+
+    private int weight;
+
+    private int height;
+
+    private String address;
 
 
-    public Person(String initialName,String initialAdress){
-        this.name = initialName;
-        this.adress = initialAdress;
 
-        }
-    public String toString(){
-        return this.name+"\n  "+this.adress;
-        }
+    public Person(String name, int age, int weight, int height, String address) {
+
+        this.name = name;
+
+        this.age = age;
+
+        this.weight = weight;
+
+        this.height = height;
+
+        this.address = address;
+
     }
+
+}
